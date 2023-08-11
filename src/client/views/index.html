@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Project 4 - MeaningCloud API</title>
+		<link rel="stylesheet" href="/styles/resets.scss" />
+		<link rel="stylesheet" href="/styles/base.scss" />
+		<link rel="stylesheet" href="/styles/header.scss" />
+		<link rel="stylesheet" href="/styles/form.scss" />
+		<link rel="stylesheet" href="/styles/footer.scss" />
+	</head>
+	<body>
+		<header>
+			<h1 class="header-val">MeaningCloud API Sentiment Analysis Results</h1>
+		</header>
+
+		<main class="main-container">
+			<div class="wrapper-container">
+				<section class="input-container">
+					<form id="form-content" onsubmit="return Client.handleSubmit(event)">
+						<input id="input-stmt" type="text" name="input" value="" placeholder="Enter URL(only)" />
+						<button class="btn" type="submit" id="submit" value="Submit" onclick="return Client.handleSubmit(event)"
+							onsubmit="return Client.handleSubmit(event)">Analyze</button>
+					</form>
+				</section>
+
+				<section id="form-results">
+					<strong class="result-title">Form Results:</strong>
+					<div id="values">
+						<div class="irony result-value">
+							<p class="category-val"></p>
+						</div>
+						<div class="polarity result-value">
+							<p class="category-val"></p>
+						</div>
+						<div class="subjectivity result-value">
+							<p class="category-val"></p>
+						</div>
+						<div class="agreement result-value">
+							<p class="category-val"></p>
+						</div>
+						<div class="confidence result-value">
+							<p class="category-val"></p>
+						</div>
+							
+						</div>
+					</div>
+				</section>
+      </div>
+		</main>
+
+		<footer>footer-text
+      		<p class="footer-val">All Rights Reserved - Anupam Shankar Dey @Udacity-Fend-Project-4</p>
+		</footer>
+
+		<script>
+			if ('serviceWorker' in navigator) {                
+                window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                    console.log('Service Worker registered:', registration);
+                    })
+                    .catch(error => {
+                    console.log('Service Worker registration failed:', error);
+                    });
+                });
+            }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+header {
+	background-color: hsl(0, 0%, 12%);
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	height: auto;
+	width: 100vw;
+}
+
+.header-val {
+	text-align: center;
+	font-size: 2.2em;
+	font-weight: 600;
+	padding: 0.5em 1em;
+}
+
+@media (max-width: 460px) {
+	.title {
+		font-size: 1.5em;
+	}
+}

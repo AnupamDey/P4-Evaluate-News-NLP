@@ -1,0 +1,31 @@
+footer {
+	display: flex;
+	background-color: hsl(0, 0%, 12%);
+	text-align: left;
+	height: auto;
+	width: 100vw;
+	padding: 0.5em 1em;
+}
+
+.footer-val {
+	flex-grow: 1;
+	align-self: center;
+}
+
+
+/* #### Responsiveness #### */
+@media (max-width: 460px) {
+	footer {
+		flex-direction: column;
+		padding: 1em 0.5em;
+	}
+
+	footer :nth-child(1) {
+		order: 2;
+	}
+
+	.footer-val {
+		text-align: center;
+	}
+
+}
