@@ -9,7 +9,7 @@ Project 4 - Evaluate a News Article using NLP
 
 
 - [Title](#project-title)
-- [Tools used](#built-with)
+- [Tools used](#tools-used)
 - [Installation](#installation)
 - [Run project](#running-the-project)
 - [Author](#author)
